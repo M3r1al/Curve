@@ -5,7 +5,7 @@ public class lagrange
 {
 	Point curveLagrange(Point points, float x)
 	{    
-		Vector2 curve = new Vector2(x, 0);
+		Point curve = new Point(x, 0);
 		for(int i = 0; i < points.Length; i++)
 		{
 			float dx = points[i].y;
@@ -15,5 +15,5 @@ public class lagrange
 			curve.y += dx;
 		}
 		return curve;       
-}
+	}
 }
