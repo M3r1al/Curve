@@ -36,10 +36,10 @@ public class bezier
 	float time(Point[] points, float x, float e = 0.0001f)
 	{
 		float t = 0.5f;
-		float h = (curveBezier(points, t).x - x) / (derivative(points, t).x - 1);
+		float h = (curve(points, t).x - x) / (derivative(points, t).x - 1);
 		while (Math.Abs(h) >= e)
 		{
-			h = (curveBezier(points, t).x - x) / (derivative(points, t).x - 1);
+			h = (curve(points, t).x - x) / (derivative(points, t).x - 1);
 			t -= h;
 		}
 		return t;
